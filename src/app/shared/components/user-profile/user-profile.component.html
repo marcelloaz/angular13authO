@@ -1,0 +1,17 @@
+
+<h1>Angular Animations Here</h1>
+<button class="btn btn-default"  (click)="toggleState()" [@myTrigger]='state'>My button</button>
+<div
+  *ngIf="auth.user$ | async as user"
+  class="card-container dark-card box_user_info"
+>
+  <h3 style="padding-left: 2em">User administration</h3>
+  <ul>
+    <li>
+      <b>Name:</b> <span> {{ user.name }}</span>
+    </li>
+    <li>
+      <b>Email:</b> <span> {{ user.email }}</span>
+    </li>
+  </ul>
+</div>
